@@ -53,8 +53,9 @@ class PlantList extends React.Component {
 		)
 	}
 
-	// Getting value from firebase response
-	// New state with Array inside
+	// Firebase Things: After Component is successifully added to the DOM
+	// Fetch the our Firebase database
+	// 
 	// Push key and value into newState,
 	// Adding newState to Plants in component state
 	componentDidMount() {
@@ -70,7 +71,7 @@ class PlantList extends React.Component {
 	      this.setState({
 	        plants: newState
 	      });
-	      // console.log(response.val());
+	      console.log(response.val());
 	    });
   	}
 }
