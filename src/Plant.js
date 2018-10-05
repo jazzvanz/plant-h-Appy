@@ -12,7 +12,8 @@ class Plant extends React.Component {
 	render() {
 		return (
 			<div className="plantList__plant plant">
-				<h4 className="plant__headline">{this.props.plantInfo.name}</h4>
+				<h4 className="plant__headline">{this.props.plantInfo.name.plantName}</h4>
+				<p>Water every {this.props.plantInfo.name.waterDate}</p>
 
 				<button onClick={() => this.removePlant(this.props.plantInfo.key)}>Remove this Plant</button>
 			</div>
