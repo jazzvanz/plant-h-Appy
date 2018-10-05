@@ -39,6 +39,15 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-size: 2rem;
+}
+
+// Remove this, just for interview 
+label,
+input,
+p,
+button {
+  font-size: 2rem;
 }
 
 ul {
