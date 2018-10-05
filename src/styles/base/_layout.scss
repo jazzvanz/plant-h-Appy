@@ -1,0 +1,73 @@
+#root {
+	background-color: peachpuff;
+	min-height: 100vh;
+}
+
+.container {
+	@include container();
+}
+
+// Reminder: Go back | add support
+@supports (display: grid) {
+	// Q: is there a way to shorten | span grid-template areas? Seems bloated
+	.plantHappy-grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-auto-rows: 10rem;
+		grid-template-areas: 
+		"header header header header header header header header header header header header"
+		"accountActions accountActions accountActions main main main main main main main main main"
+		"accountActions accountActions accountActions main main main main main main main main main"
+		"accountActions accountActions accountActions main main main main main main main main main"
+		"accountActions accountActions accountActions main main main main main main main main main"
+		"accountActions accountActions accountActions main main main main main main main main main"
+		"accountActions accountActions accountActions main main main main main main main main main"
+		"accountActions accountActions accountActions main main main main main main main main main"
+		"footer footer footer footer footer footer footer footer footer footer footer footer";
+	}
+
+	.header {
+		grid-area: header;
+		background-color: coral;
+	}
+
+	.main {
+		grid-area: main;
+		background-color: pink;
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-auto-rows: 10rem;
+		grid-template-areas: 
+		"plants plants plants plants plants plants plants plants"
+		"plants plants plants plants plants plants plants plants"
+		"plants plants plants plants plants plants plants plants"
+		"plants plants plants plants plants plants plants plants"
+		"plants plants plants plants plants plants plants plants"
+		"plantActions plantActions plantActions plantActions plantActions plantActions plantActions plantActions"
+		"plantActions plantActions plantActions plantActions plantActions plantActions plantActions plantActions";
+	}
+
+	.footer {
+		grid-area: footer;
+		background-color: crimson;
+	}
+
+	.account-actions {
+		grid-area: accountActions;
+		background-color: aquamarine;
+	}
+
+	.plantList {
+		grid-area: plants;
+		background-color: lightblue;
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-auto-rows: 10rem;
+		grid-gap: 1.5rem;
+	}
+
+	.plant-actions {
+		grid-area: plantActions;
+		background-color: lightseagreen;
+	}
+}

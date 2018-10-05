@@ -1,0 +1,9 @@
+// Reminder: Go back | add support
+@supports (display: grid) {
+	.plant {
+		grid-column: span 2;
+		grid-row: span 2;
+		background-color: lightpink;
+		border-radius: 1rem;
+	}
+}

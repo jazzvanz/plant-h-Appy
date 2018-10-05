@@ -1,0 +1,10 @@
+// Reminder: Go back | add support
+@supports (display: grid) {
+	.plantList {
+
+	}
+		// Q: is anyone else doing this?
+		.plantList__headline {
+			grid-column: 1 / -1;
+		}
+}

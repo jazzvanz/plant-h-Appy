@@ -4,15 +4,15 @@ import plants from './plants.js';
 class Plant extends React.Component {
 	render() {
 		return (
-			<div>
+			<React.Fragment>
 				{plants.map((plant) => {
 					return (
 						<div className="plantList__plant plant">
-							<h4 className="plant__headline">{plant.name}</h4> 
+							<h4 className="plant__headline">{plant.name}</h4>
 						</div>
 					)
 				})}
-			</div>
+			</React.Fragment>
 		)
 	}
 }
